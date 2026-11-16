@@ -1,0 +1,42 @@
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.pagina{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: 
+        radial-gradient(circle at 10% 10%, #dce6f7 0%, transparent 35%),
+        radial-gradient(circle at 90% 90%, #dce6f7 0%, transparent 35%),
+        #F3F5F9;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.conteudo::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("./assets/logoRMS.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px;
+
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: -1;
+}
+
+    

@@ -1,0 +1,212 @@
+.login-container{
+    position: relative;
+    z-index: 1;
+    background-color: #ffff ;
+    width: 100%;
+    max-width: 400px;         
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(17,28,48,0.10);
+    transition: opacity 0.5s ease;    
+}
+
+.login-container h2{
+    color: #111C30;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #8993A4;
+    margin-bottom: 30px;
+}
+
+.login-container form{
+    display: flex ;
+    flex-direction: column;
+    flex: 1;
+}
+
+.login-container label{
+    color: #263247;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.login-container input{
+    padding: 13px;
+    border: 1px solid #D9DEE7;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    outline: none ;
+    font-size: 14px;
+}
+
+.login-container input:focus{
+    border-color: #315B96;
+
+}
+
+.esqueceu-senha{
+    display: block;
+    color: #315B96;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 25px;
+
+}
+
+.login-container button{
+
+    background-color: #111c30;
+    color:white;
+    padding: 14px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #315B96;
+}
+.login-container .campo-senha .botao-senha {
+    position: absolute;
+    right: 12px;
+    top: 13px;
+
+    padding: 0;
+    margin: 0;
+
+    width: auto;
+    height: auto;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    color: #315B96;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-container .campo-senha .botao-senha:hover {
+    background: transparent;
+    color: #111C30;
+}
+
+.campo-senha{
+    position:relative;
+}
+
+.campo-senha input {
+    width: 100%;
+    padding-right: 85px;
+    box-sizing: border-box;
+}
+.auth-pagina{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    column-gap: 200px;
+}
+
+.Painel{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background-color: #0f1a35;;
+    flex: 1;                   
+    min-width: 120px;
+    transition: transform 0.8s cubic-bezier(.65, 0, .25, 1);
+    background:
+        radial-gradient(circle at 80% 15%, rgba(201, 162, 74, 0.20), transparent 40%),
+        radial-gradient(circle at 15% 85%, rgba(50, 90, 180, 0.30), transparent 45%),
+        #0f1a35;
+    overflow: hidden;
+}
+
+.auth-pagina.cadastro .Painel{
+    transform: translateX(-100%);
+}
+
+.painel-msg{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    text-align: center;
+    color: #fff;
+}
+.painel-msg h2{
+    font-size: 28px;
+}
+.painel-msg p{
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+
+}
+.botaoAnimado{
+    background: transparent;
+    color: #c9a24a;
+    border: 1px solid #c9a24a;
+    padding: 10px 28px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.botaoAnimado:hover{
+    background: rgba(201,162,74,0.15);
+}
+
+.form-cadastro{
+    opacity: 0;                      
+}
+
+.auth-pagina.cadastro .form-cadastro{
+    opacity: 1;                     
+}
+
+.auth-pagina.cadastro .form-login{
+    opacity: 0;                    
+}
+.painel-msg .footer{
+    position: absolute;
+    bottom: 16px;
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.6;
+}
+.painel-logo{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 0 18px rgba(201, 162, 74, 0.35));
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+@keyframes flutuar{
+    0%, 100%{ transform: translateY(0); }
+    50%{ transform: translateY(-8px); }
+}   
+@media (max-width: 900px){
+    .Painel{
+        display: none;        
+    }
+}
