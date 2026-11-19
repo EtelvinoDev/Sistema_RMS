@@ -1,0 +1,216 @@
+
+.barra-lateral {
+    width: 60px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: width 0.6s;
+    background: linear-gradient(
+    160deg,
+    #17294b 0%,
+    #0f1a35 45%,
+    #080f20 100%
+);;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    border-right: 1px solid #ccc;
+}
+
+.topo-barra {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.barra-logo {
+    height: 55px;
+    width: 55px;
+    object-fit: contain;
+}
+
+.botao-menu {
+    width: 40px;
+    height: 35px;
+    padding: 5px;
+    color: #c9a24a;
+    border: 1px solid #c9a24a;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 0;
+    transition: margin-left 0.6s, background 0.3s;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.barra-lateral:not(.aberto) .topo-barra {
+    flex-direction: column;
+    align-items: center;
+}
+
+.barra-lateral:not(.aberto) .botao-menu {
+    margin: 5px 0 0;
+    flex-shrink: 0;
+}
+
+
+.barra-lateral.aberto .topo-barra {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.barra-lateral.aberto .botao-menu {
+    margin-left: auto;
+}
+
+.botao-menu:hover {
+    background: rgba(201,162,74,0.15);
+}
+
+.barra-lateral.aberto {
+    width: 264px;
+}
+
+.barra-lateral .barra-navegacao {
+    display: none;
+}
+
+.barra-lateral.aberto .barra-navegacao {
+    display: block;
+    width: 100%;
+}
+
+.barra-lateral .barra-navegacao ul {
+    list-style: none;
+    padding: 10px;
+    margin: 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.barra-lateral .barra-navegacao li {
+    margin-bottom: 8px;
+}
+
+.barra-lateral .barra-navegacao a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #d6d9e2;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 12px 15px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s, padding-left 0.3s;
+}
+
+.barra-lateral .barra-navegacao a:hover {
+    background: linear-gradient(
+        90deg,
+        rgba(201, 162, 74, 0.20),
+        rgba(201, 162, 74, 0.04)
+    );
+
+    color: #c9a24a;
+    padding-left: 22px;
+}
+
+.barra-lateral .barra-navegacao a.ativo {
+    background: rgba(201, 162, 74, 0.18);
+    color: #c9a24a;
+    border-left: 3px solid #c9a24a;
+}
+
+.barra-lateral .Titulo-Lateral {
+    font-size: 22px;
+    font-weight: 600;
+    color: #d6d9e2;
+    margin: 25px 0 5px 15px;
+}
+
+.barra-lateral .data-atual {
+    font-size: 16px;
+    font-weight: 400;
+    color: #8daddd;
+    margin: 0 15px 20px;
+}
+
+.footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #8daddd;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    border-top: 1px solid rgba(201, 162, 74, 0.25);
+}
+.barraPesquisa-Lateral {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 0 5px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.barraPesquisa-Lateral .barra-pesquisa {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.barra-lateral:not(.aberto) .barra-navegacao {
+    display: block;
+    width: 100%;
+}
+
+.barra-lateral:not(.aberto) .barra-navegacao ul {
+    padding: 10px 5px;
+    margin: 15px 0;
+}
+
+.barra-lateral:not(.aberto) .barra-navegacao a {
+    justify-content: center;
+    padding: 12px 0;
+}
+
+.barra-lateral:not(.aberto) .barra-navegacao span {
+    display: none;
+}
+
+.barra-lateral.aberto .barra-navegacao span {
+    display: inline;
+}
+
+.linha-separadora {
+    width: 85%;
+    border: none;
+    border-top: 1px solid #c9a24a;
+    margin: 10px auto 15px;
+}
+
+.barra-lateral .Titulo-Lateral,
+.barra-lateral .data-atual,
+.barra-lateral .barraPesquisa-Lateral,
+.barra-lateral .linha-dourada,
+.barra-lateral .footer,
+.barra-lateral .barra-navegacao span {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.barra-lateral.aberto .Titulo-Lateral,
+.barra-lateral.aberto .data-atual,
+.barra-lateral.aberto .barraPesquisa-Lateral,
+.barra-lateral.aberto .linha-dourada,
+.barra-lateral.aberto .footer,
+.barra-lateral.aberto .barra-navegacao span {
+    opacity: 1;
+    transition-delay: 0.25s;
+}

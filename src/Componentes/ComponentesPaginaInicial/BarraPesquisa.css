@@ -1,0 +1,40 @@
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 350px;
+    height: 42px;
+
+    padding: 0 15px;
+    background-color: #fff;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.barra-pesquisa:focus-within {
+    border-color: #c9a24a;
+    box-shadow: 0 0 5px rgba(201, 162, 74, 0.3);
+}
+
+.icone-pesquisa {
+    color: #8daddd;
+}
+
+.barra-pesquisa input {
+    width: 100%;
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+    color: #0f1a35;
+    background: transparent;
+}
+
+.barra-pesquisa input::placeholder {
+    color: #999;
+}

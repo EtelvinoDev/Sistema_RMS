@@ -6,6 +6,7 @@ function Login() {
 
     const [mostrarSenha, setMostrarSenha] = useState(false);
     const [cadastro, setCadastro] = useState(false);
+
     return (
         <div className={`auth-pagina ${cadastro ? "cadastro" : ""}`}>
 
@@ -54,7 +55,7 @@ function Login() {
                 <div className="painel-msg" >
                     <img src={logo} alt="Logo RMS" className="painel-logo"/>
 
-                    <h2>{cadastro ? "Já tem conta?" : "Novo por aqui?"}</h2>
+                    <h2>{cadastro ? "Já possui um cadastro?" : "Novo por aqui?"}</h2>
                     
                     <p>{cadastro? "Entre com seus dados para continuar":
                                   "Crie sua conta e comece agora mesmo."

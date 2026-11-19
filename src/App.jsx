@@ -1,14 +1,11 @@
-import Cabecalho from "./Componentes/Cabecalho.jsx";
-import Login from "./pages/Login.jsx";
+
 import "./App.css";
+import AppRoutes from "./Routes/AppRoutes";
+
+
 function App() {
     return (
-        <div className="pagina">
-            <main className="conteudo">
-                <Login/>
-            </main>
-            
-        </div>
+       <AppRoutes/>
     );
 }
 
